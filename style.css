@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Bebas+Neue&display=swap');
 
 :root {
-    --verde-claro: #5CB85C;
-    --alto-contraste-fundo: #1C1C1C;
-    --alto-contraste-texto: #F5F5F5;
-    --alto-contraste-link: #A8D08D;
+    --vermelho-destaque: #D90429;
+    --cinza-escuro: #121212;
+    --cinza-claro: #F2F2F2;
+    --contraste-texto: #FFFFFF;
+    --contraste-fundo: #000000;
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    font-family: 'Montserrat';
-    background-color: #F0F8F0; /* Cor de fundo clara */
+    background-color: #1A1A1A;
+    color: var(--contraste-texto);
 }
 
 header {
-    background-color: #FFFFFF;
+    background-color: var(--contraste-fundo);
+    border-bottom: 3px solid var(--vermelho-destaque);
 }
 
 section {
@@ -23,28 +25,32 @@ section {
 }
 
 .nav-link {
-    color: #3B9E47; /* Verde mais escuro */
+    color: var(--contraste-texto);
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .inicio-fundo {
-    background-image: url('img/natureza.jpg'); /* Substitua pela imagem de fundo sobre natureza ou sustentabilidade */
+    background-image: url('img/racionais-fundo.jpg'); /* imagem temática urbana */
     background-size: cover;
     background-position: center;
-    border-radius: 80px;
+    border-radius: 40px;
     width: 100%;
     height: 606px;
     padding: 40px;
     margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo para a imagem à direita */
 .img-inicio {
     position: absolute;
     right: 0;
-    top: 18rem;
-    width: 45rem;
+    top: 14rem;
+    width: 40rem;
     height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
 }
 
 .esquerda-conteudo {
@@ -55,29 +61,33 @@ section {
 }
 
 .botao-inicio {
-    background-color: var(--verde-claro);
+    background-color: var(--vermelho-destaque);
     border-radius: 30px;
     border: none;
     width: 14em;
     height: 3em;
     align-content: center;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .display-4 {
-    text-shadow: -5px 5px var(--verde-claro);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px var(--vermelho-destaque);
 }
 
-#sustentabilidade {
+#historia {
     position: relative;
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/flores-verde.png') top right no-repeat, /* Adicionando flor como padrão verde */
-        url('img/flores-invertidas.png') bottom left no-repeat;
-    background-size: 180px 180px;
+    background: url('img/pichacao.png') top right no-repeat;
+    background-size: 160px;
 }
 
-#sustentabilidade .container {
+#historia .container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,43 +96,52 @@ section {
 }
 
 h2 {
-    font-family: 'Lemon', serif;
-    font-size: 2.5em;
-    font-style: normal;
-    color: var(--verde-claro);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8em;
+    color: var(--vermelho-destaque);
+    text-transform: uppercase;
 }
 
 #galeria {
-    background-color: #F1F9F1; /* Cor de fundo clara para a galeria */
+    background-color: #0D0D0D;
 }
 
 .fundo-galeria {
-    background: url('img/folhas-verde.png') bottom right no-repeat;
-    background-size: 180px 180px;
+    background: url('img/grafite.png') bottom right no-repeat;
+    background-size: 180px;
 }
 
 #contato {
-    background-image: url('img/natureza-verde.jpg'); /* Imagem de fundo da seção de contato */
+    background-image: url('img/racionais-contato.jpg');
     background-size: cover;
+    background-position: center;
     padding: 4rem 0;
 }
 
 .formulario {
-    background-color: #ffffff;
+    background-color: #1E1E1E;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
     font-weight: bold;
+    color: var(--contraste-texto);
 }
 
 .formulario button {
-    background-color: #3B9E47;
+    background-color: var(--vermelho-destaque);
     border: none;
     font-weight: bold;
+    color: #fff;
 }
 
 .form-control {
-    background-color: #E8F1E8; /* Cor de fundo mais suave para os campos de formulário */
+    background-color: #2A2A2A;
+    border: none;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
 }
 
 .menu-acessibilidade {
@@ -152,34 +171,30 @@ h2 {
 }
 
 .alto-contraste {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+    background-color: var(--contraste-fundo);
+    color: var(--contraste-texto);
 }
 
 .alto-contraste header,
 .alto-contraste footer,
 .alto-contraste .formulario {
-    background-color: var(--alto-contraste-fundo);
-    color: var(--alto-contraste-texto);
+    background-color: var(--contraste-fundo);
+    color: var(--contraste-texto);
 }
 
 .alto-contraste .nav-link {
-    color: var(--alto-contraste-link);
+    color: var(--vermelho-destaque);
 }
 
 .alto-contraste .botao-inicio,
 .alto-contraste .formulario button,
 .alto-contraste .btn-primary {
-    background-color: var(--alto-contraste-link);
-    color: var(--alto-contraste-fundo);
-}
-
-.alto-contraste #sustentabilidade {
-    background: none;
+    background-color: var(--vermelho-destaque);
+    color: var(--contraste-texto);
 }
 
 .alto-contraste #galeria {
-    background-color: var(--alto-contraste-fundo);
+    background-color: var(--contraste-fundo);
 }
 
 .alto-contraste .fundo-galeria {
